@@ -1,0 +1,29 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+    <h1>Listado de Estudiantes del GIITNI</h1>    
+
+    <div>       
+            {% if estudiantes %}
+
+                {% for p in estudiantes %}
+                
+                    <li> {{p.nombre}} {{p.apellido}}</li>
+                {% endfor %}
+
+            {% endif %}
+        <br>
+        
+    </div>
+    <h1>Ingresar Nuevo Estudiante</h1>    
+
+    <button type="button" class="btn btn-dark"><a href="crearEstudiante">Ingresar</a></button>
+
+
+{% endblock %}
+
+
+
